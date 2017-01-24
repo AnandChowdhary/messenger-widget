@@ -1,0 +1,98 @@
+.messenger-widget .fb-page {
+	z-index: -1;
+	top: 0; left: 0;
+	width: 100%;
+	opacity: 0;
+	transition: 0.75s;
+	border-radius: 10px;
+	position: relative;
+	z-index: 1;
+	overflow: hidden;
+	display: none;
+}
+.messenger-widget {
+	position: fixed;
+	bottom: 20px;
+	overflow: hidden;
+	transition: 0.75s;
+	right: 20px;
+}
+.messenger-widget .messenger-icon {
+	width: 50px;
+	cursor: pointer;
+	height: 50px;
+	overflow: hidden;
+	border-radius: 100%;
+	/*background: linear-gradient(#00c6ff, #006eff);*/
+	background: #006eff;
+	text-align: center;
+	transition: 0.75s;
+	border: 1px solid transparent;
+	box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+}
+.messenger-widget svg.icon {
+	transition: 0.75s;
+	width: 30px;
+	position: absolute;
+	bottom: 20px;
+	right: 10px;
+}
+
+.messenger-widget.opened {
+	bottom: 30px;
+	right: 30px;
+}
+.messenger-widget.opened .fb-page {
+	z-index: 1;
+	display: block;
+	opacity: 1;
+}
+.messenger-widget.opened .messenger-icon {
+	background: #fff;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	width: 300px;
+	border-radius: 10px;
+	box-shadow: 0 40px 80px rgba(0, 0, 0, 0.1);
+	height: 300px;
+}
+.messenger-widget.opened svg.icon {
+	opacity: 0;
+	transform: translate(60px, 0);
+}
+.fb_iframe_widget_fluid span,
+.fb_iframe_widget iframe {
+	width: 100% !important;
+}
+
+.loader svg {
+	width: 40px;
+	opacity: 0;
+	height: 40px;
+	margin: 0 auto;
+	position: absolute;
+	top: 40%;
+	left: 0; right: 0;
+}
+.opened .loader svg {
+	opacity: 1;
+}
+
+.close-btn {
+	position: absolute;
+	z-index: 3;
+	right: 20px;
+	opacity: 0;
+	top: 20px;
+	background: #fff;
+	border-radius: 100%;
+	width: 30px;
+	height: 30px;
+	line-height: 27px;
+	font-size: 18px;
+	text-align: center;
+	transition: 0.75s;
+	cursor: pointer;
+}
+.messenger-widget.opened .close-btn {
+	opacity: 1;
+}
